@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004 交錯漂浮版</title>
+    <style type="text/css" >
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:  none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        body{
+            padding: 100px 0; /*上下100 左右0*/
+            background: linear-gradient(60deg, #29323c 0%, #485563 100%) fixed /*顏色固定不會隨畫面變動*/ center center /*位置*/ / 100% 100% /*寬高*/;
+        }
+        .wrap{
+            width: 1200px;
+            margin: auto;
+        }
+        .item{
+            display: flex; /*橫排*/
+            align-items: center; /*居中對齊*/
+            margin-bottom: 70px;
+        }
+        .item .pic{
+            width: 55%;
+            flex-shrink: 0; /*收縮值*/
+        }
+        .item .pic img{
+            width: 100%;
+            vertical-align: middle; /*避免圖片下方空格*/
+        }
+        .item .txt{
+            width: 55%; /*55+55=110>100*/
+            flex-shrink: 0;
+            padding: 50px 30px;
+            box-sizing: border-box; /*修正出格*/
+            position: relative;
+            z-index: 1;
+        }
+        .item h2{
+            font-weight: 900;
+        }
+        .item p{
+            font-weight: 500;
+        }
+        .item > :first-child{   /*第一層第一個物件*/
+            margin-right: -10%;
+        }
+        .item:nth-child(1) .txt{  /*第一個物件*/
+            background-color: rgba(222,222,222,0.7);
+        }
+        .item:nth-child(2) .txt{  /*第二個物件*/
+            background-color: rgba(222,222,222,0.7);
+        }
+        .item:nth-child(3) .txt{  /*第三個物件*/
+            background-color: rgba(222,222,222,0.7);
+        }
+        .item:nth-child(4) .txt{  /*第四個物件*/
+            background-color: rgba(222,222,222,0.7);
+        }
+        .item:nth-child(5) .txt{
+            background-color: rgba(222,222,222,0.7);
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+    <!-----------------item1----------------------------->
+        <div class="item">
+            <div class="pic">
+                <img src="https://i.pinimg.com/736x/eb/3c/93/eb3c9373b248650f30af98a94f778d21.jpg">
+            </div>
+            <div class="txt">
+                <h2>神劍闖江湖</h2>
+                <p>2012<br>
+                    導演:大友啟史<br>
+                    演員:佐藤健、武井咲、吉川晃司、蒼井優、青木崇高、綾野剛、須藤元氣、田中偉登、奧田瑛二、江口洋介、香川照之<br>
+                    主題曲: ONE OK ROCK 「THE BEGINNING」<br>
+                    ©《神劍闖江湖》製作委員會
+                </p>
+            </div>
+        </div>
+    <!-----------------item2----------------------------->
+        <div class="item">
+            <div class="txt">
+                <h2>神劍闖江湖-京都大火篇</h2>
+                <p>2014<br>
+                    導演:大友啟史<br>
+                    演員:佐藤健、武井咲、蒼井優、青木崇高、伊勢谷友介、江口洋介、神木隆之介、土屋太鳳、瀧藤賢一、藤原龍也<br>
+                    主題曲: ONE OK ROCK 「Mighty Long Fall」<br>
+                    ©《神劍闖江湖》製作委員會
+
+                </p>
+            </div>
+            <div class="pic">
+                <img src="https://4.bp.blogspot.com/-aqKd03y3yNk/WxEDnlNIhnI/AAAAAAAAiGA/KW6CVK93NyMz4EcZV2R9-IR0kl6_S1oUgCKgBGAs/s1600/%25E3%2582%258B%25E3%2582%258D%25E3%2581%2586%25E3%2581%25AB%25E5%2589%25A3%25E5%25BF%2583%2B%25E4%25BA%25AC%25E9%2583%25BD%25E5%25A4%25A7%25E7%2581%25AB%25E7%25B7%25A8%2B2014.jpg">
+            </div>
+        </div>
+    <!-----------------item3----------------------------->
+    <div class="item">
+        <div class="pic">
+            <img src="https://3.bp.blogspot.com/-KoHyQ6wAz00/WyCoeptH3hI/AAAAAAAAiM0/CEHgldUcy3Ye7baNT-aGzrheYdFESrxPgCKgBGAs/s1600/%25E3%2582%258B%25E3%2582%258D%25E3%2581%2586%25E3%2581%25AB%25E5%2589%25A3%25E5%25BF%2583%2B%25E4%25BC%259D%25E8%25AA%25AC%25E3%2581%25AE%25E6%259C%2580%25E6%259C%259F%25E7%25B7%25A8%2B2014.jpg">
+        </div>
+        <div class="txt">
+            <h2>神劍闖江湖-傳說的最終篇</h2>
+            <p>2014<br>
+                導演:大友啟史<br>
+                演員:佐藤健、武井咲、蒼井優、青木崇高、伊勢谷友介、江口洋介、神木隆之介、土屋太鳳、藤原龍也、高橋瑪莉潤、田中泯、小澤征悅、福山雅治<br>
+                主題曲: ONE OK ROCK 「Heartache」<br>
+                ©《神劍闖江湖》製作委員會
+
+
+            </p>
+        </div>
+    </div>
+    <!-----------------item4----------------------------->
+    <div class="item">
+        <div class="txt">
+            <h2>神劍闖江湖-THE FINAL</h2>
+            <p> 2021<br>
+                導演:大友啟史<br>
+                演員:佐藤健、武井咲、蒼井優、新田真劍佑、有村架純、青木崇高、伊勢谷友介、江口洋介、神木隆之介、土屋太鳳、大西利空、三浦涼介、鶴健辰吾<br>
+                主題曲: ONE OK ROCK 「Renegades」<br>
+                ©《神劍闖江湖》製作委員會
+
+            </p>
+        </div>
+        <div class="pic">
+            <img src="https://image.japaholic.com/article/images/2021/04/5c065d4f21b4633e631c168ba8ad645c.jpg   ">
+        </div>
+    </div>
+    <!-----------------item5----------------------------->
+    <div class="item">
+        <div class="pic">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/911PUu1n0RS.jpg">
+        </div>
+        <div class="txt">
+            <h2>神劍闖江湖-THE BEGINNNG</h2>
+            <p>2021<br>
+                導演:大友啟史<br>
+                演員:佐藤健、武井咲、蒼井優、有村架純、青木崇高、高橋一生、村上虹郎、安藤正信、北村一輝<br>
+                主題曲: ONE OK ROCK 「Renegades」<br>
+                ©《神劍闖江湖》製作委員會</p>
+        </div>
+        
+    </div>
+</div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>網頁頁尾板塊</title>
+    <style type="text/css">
+        @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-family: 'Noto Sans TC', sans-serif;
+                text-decoration: none;
+                color: #ccc;
+            }
+            body{
+                background-color: #000;
+            }
+            .main-footer {
+                padding: 100px 0 0;
+                background-color: #26272B;
+            }
+            .main-footer .container{
+                display: flex;
+                width: 1200px;
+                height: 74vh;
+                margin: auto;
+            }
+            .footer-item{
+                width: 0; 
+                flex-grow: 1;/*平均分配*/
+                margin: 0 20px;                
+    
+            }
+            .footer-item h4{
+                font-size: 24px;
+                text-align: left;
+                margin-bottom: 0.5em;
+                padding-bottom: 0.5em;
+                color: #fff;
+            }
+            .footer-item nav{
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-item nav a{
+                line-height: 1.4;
+                text-decoration: none;
+                padding: 5px 0;
+            }
+            .footer-item nav a:hover{
+                color: #fff;
+            }
+            .footer-subs {
+                padding: 0 50px;
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-subs .logo{
+                display: flex;
+            }
+            .footer-subs .logo img{
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+            }
+            .footer-subs .logo h2{
+                display: flex;
+                align-items:center ;
+                padding: 0 20px;
+                color: #fff;
+            }
+            .footer-subs h4 {
+                margin: 20px 0;
+            }
+            .footer-subs .info{
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-subs form{
+                display: flex;
+                width: 100%;
+                margin: auto 0px;
+            }
+    
+            .footer-subs form{
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-subs input[type="text"],
+            .footer-subs input[type="submit"]{
+                border: none;
+                padding: 5px 10px;
+                
+            }
+            .footer-subs input[type="text"]{
+                width: 0;
+                flex-grow: 1;
+            }
+            .footer-subs .btn{
+                margin: 0 50px;
+                width: 150px;
+                color: rgb(73, 72, 72);
+                border-radius: 10px;
+                text-align: center;
+                background-color: #fff;
+                font-weight: 700;
+            }
+            .footer-subs .btn:hover{
+                color: #fff;
+                background-color: rgba(0,0,0,0.3);
+    
+                
+            }
+            .copyright{
+                width: 90%;
+                display: flex;
+                text-align: left;
+                padding: 20px 0px;
+                background-color: #26272B;
+                border-top: 1px solid #fff;
+                margin: auto;
+              
+            }
+            .copyright .social-icons{
+                display: flex;
+                text-align: right;
+                margin-left: 50%;
+                color: #000;
+            }
+            .social-icons a{
+                font-size: 30px;
+                margin: 0 20px;
+            }
+          
+            
+            
+    
+        </style>
+    </head>
+    <body>
+        <div class="main-footer">
+            <div class="container">        
+                
+                <div class="footer-item footer-subs">
+                    <div class="logo">
+                        <img src="https://160san.com/wp-content/uploads/2021/06/cropped-6.png">
+                        <h2>壹陸零人生</h2>
+                    </div>
+                    <div class="info">
+                        <h4>地址:第七天堂</h4>
+                        <h4>電話:0800092000</h4>
+                    <a href="/" class="btn">寄信 <br>Email to ME</a>
+                    </div>
+                </div>
+    
+                <div class="footer-item">
+    
+                    <h4>CATEGORIES </h4>
+                    <nav>
+                        <a href="/"><i class="fas fa-asterisk"></i> 極簡零</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> CSS零起手式 CSS beginner</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 人生壹影</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 人生壹書</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 壹起出遊六</a>
+                        
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>QUICK LINK </h4>
+                    <nav>
+                        <a href="/"><i class="fas fa-asterisk"></i> 關於百六 About Me</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 聯絡百六 Contact Me</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 贊助百六 Donate Me</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 隱私政策 Privacy Policy</a>
+                        <a href="/"><i class="fas fa-asterisk"></i> 網站地圖 Site Map</a>
+                    </nav>
+                </div>
+                
+            </div>
+                <div class="copyright">
+                    <h4>Copyright &copy; 2021 壹陸零人生</h4>
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="/"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="/"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="/"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a></li>   
+                    </ul>
+                </div>
+            
+        </div>
+    </body>
+</html>

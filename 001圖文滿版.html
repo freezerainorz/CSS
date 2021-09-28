@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Multiple Backgrounds</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap" rel="stylesheet">   
+    
+    <style type="text/css">
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap');
+        
+        /* css reset*/
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+            .banner{
+                width: 100%;
+                height: 100vh; /*vh: view height*/
+                background: linear-gradient(24deg, #f3e7e9 0%, #e3eeff 14%, #e3eeff 50%,transparent 50%) center center / 100% 100%,
+                url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?cs=srgb&dl=pexels-negative-space-169573.jpg&fm=jpg) right center / auto 100%;
+                /*multiple background: linear-gradient(degree, color 50%, trasparent 50%) background position / width height, pic width height / width height ) */ 
+                
+            }
+            .containter{
+                width: 100%;
+                margin: auto;
+                height: 100%;
+            }
+            .banner-txt{
+                height: 100%;
+                display: flex;
+                flex-direction: column; /*main axis*/
+                justify-content: center; /*cross axis*/
+                align-items: flex-start;
+                padding-left: 30px;
+                padding-top:170px;
+                
+                
+            }
+
+            .banner-txt h1{
+                font-size: 80px;
+                font-weight: 900;
+                border-bottom: 3px solid #333;
+            }
+           
+            .banner-txt h1 small{
+                display: block;
+                font-size: 53px;
+                font-weight: 700;
+            }
+            .banner-txt h2{
+                font-size: 50px;
+                font-weight: 700;
+            }
+            .banner-txt p{
+                font-size: 30px;
+                font-weight: 300;
+            }
+
+    </style>
+
+</head>
+<body>
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>
+                    CSS 
+                    <small>
+                        Mutiple Backgrounds
+                    </small>
+                </h1>
+                <h2></h2>
+                <p>
+                    background:
+                    <br> 
+                    linear-gradient(deg, color 50%,transparent 50%)
+                    <br>
+                    center center / 100% 100%,
+                    
+                    url(pic) right center / auto 100%;
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

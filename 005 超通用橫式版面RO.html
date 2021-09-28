@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超通用橫式版面</title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'VT323', monospace;
+    }
+    .wrap{
+        height: 100vh; /*可視寬度 visible width*/
+        display: flex;
+        align-items: center;
+        background: #fff;
+    }
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap; /*超過寬度換行 change colomn while over the width*/
+    }
+    .item{
+        width: 363px; /*400-30-2-5*/
+        margin: 15px;
+        display: flex;
+        background-color: #fff;
+        border: 1px solid rgba(161,184,230,0.7);
+        border-radius: 10px;
+    }
+    .item:nth-child(1):hover{
+        border: 5px solid rgba(161,184,230,0.7);
+        box-shadow: 0 10px 30px rgba(161,184,230,0.9) ; /*x軸 Y軸 模糊度 色彩* X axis Y axis opacity color*/
+    }
+    
+    .item:nth-child(2):hover{
+        border: 5px solid rgba(161,184,230,0.7);
+        box-shadow: 0 10px 30px rgba(161,184,230,0.9) ; 
+    }
+    
+    .item:nth-child(3):hover{
+        border: 5px solid rgba(161,184,230,0.7);
+        box-shadow: 0 10px 30px rgba(161,184,230,0.9) ; 
+    }
+    
+    .item:nth-child(4):hover{
+        border: 5px solid rgba(161,184,230,0.7);
+        box-shadow: 0 10px 30px rgba(161,184,230,0.9) ; 
+    }
+    
+    .item:nth-child(5):hover{
+        border: 5px solid rgba(161,184,230,0.7);
+        box-shadow: 0 10px 30px rgba(161,184,230,0.9) ; 
+    }
+    
+    .item:nth-child(6):hover{
+        border: 5px solid rgba(161,184,230,0.7);
+        box-shadow: 0 10px 30px rgba(161,184,230,0.9) ; 
+    }
+    .item .pic{
+        width: 55%;
+        height: 90%;
+        border: 2px solid rgba(161,184,230,0.5);
+        margin: 10px;
+        border-radius: 5px;
+    }
+    .item .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*填滿元素的寬度及高度(維持原比例)The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box*/
+
+
+    }
+    .item .txt{
+        width: 45%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        overflow: hidden;
+        
+    }
+    .item .txt h2{
+        margin-bottom: 0.4em;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    .item .txt p{
+        font-weight: 300;
+        font-size: 20px;
+        
+    }
+    .item .txt .btn{
+        line-height: 1em;
+        border: 1px solid #ccc;
+        padding: 0 0.8em;
+        align-self: flex-end; /*overrides a grid or flex item's align-items value*/
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: auto; /*齊頭 不會因文字長短改變上下位置 equality of top*/
+        color: #000;
+        font-size: 20px;
+    }
+    .item .txt .btn:hover{
+        background-color: #ccc;
+        color: #fff;
+    }
+    .item .txt.btn:active{
+        background-color: #000;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://wiki.originsro.org/w/images/9/9b/Swordman.png">
+                </div>
+                <div class="txt">
+                    <h2>Swordman</h2>
+                    <p> Base LV:99<br> Job LV:99</p>
+                    <a href="/"class="btn">OK</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://wiki.originsro.org/w/images/2/29/Archer.png">
+                </div>
+                <div class="txt">
+                    <h2>Archer</h2>
+                    <p> Base LV:99<br> Job LV:99</p>
+                    <a href="/"class="btn">OK</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://wiki.originsro.org/w/images/c/ca/Magician.png">
+                </div>
+                <div class="txt">
+                    <h2>Magician</h2>
+                    <p> Base LV:99<br> Job LV:99</p>
+                    <a href="/"class="btn">OK</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://wiki.originsro.org/w/images/1/19/Merchant.png">
+                </div>
+                <div class="txt">
+                    <h2>Merchant</h2>
+                    <p> Base LV:99<br> Job LV:99</p>
+                    <a href="/"class="btn">OK</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://wiki.originsro.org/w/images/f/fc/Thief.png">
+                </div>
+                <div class="txt">
+                    <h2>Thief</h2>
+                    <p> Base LV:99<br> Job LV:99</p>
+                    <a href="/"class="btn">OK</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://wiki.originsro.org/w/images/c/c2/Acolyte.png">
+                </div>
+                <div class="txt">
+                    <h2>Acolyte</h2>
+                    <p> Base LV:99<br> Job LV:99</p>
+                    <a href="/"class="btn">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

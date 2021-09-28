@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間軸</title>
+    <style type="text/css">
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    body{
+        background-color: #edece1;
+    }
+    .wrap{
+        width: 960px;
+        margin: auto;
+    }
+    .wrap h1{
+        padding-top: 50px;
+    }
+    .wrap a{
+        text-decoration: none;
+        color: #000;
+        font-weight: 700;
+    }
+    .wrap:after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 0px;
+        clear: both; /*sets whether an element must be moved below (cleared) floating elements that precede it.*/
+    }
+    .timeline{
+        padding: 100px 0 200px;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .timeline li{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 20px 0;
+        position: relative;
+    }
+    .timeline li:nth-child(odd){
+        float: left;
+        padding-right: 100px;
+    }
+    .timeline li:nth-child(even){
+        float: right;
+        padding-left: 100px;
+        transform: translateY(50%);
+    }
+    
+    
+    .timeline li:nth-child(odd)::after{ /*中間線*/
+        right: 0;
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: 0;
+        height: 150%;
+        background-color: #ccc;
+        z-index: -1;
+    }
+    
+    .timeline li:before{   /*中間點*/
+        content:'';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #aaa;
+        z-index: 2;
+    }
+    .timeline li:nth-child(odd):before{
+        right: -10px;
+    }
+    .timeline li:nth-child(even):before{
+        left: -10px;
+    }
+    .timeline a{  /*板塊*/
+        display: inline-block; /*讓超連結可以設定寬跟高*/
+        text-decoration: none;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px #888;
+        background-color: #ccc;
+        z-index: 2;
+
+    }
+    .timeline a:hover{
+        background-color: #555;
+    }
+    .timeline a:hover h2,
+    .timeline a:hover p{
+        color: #fff;
+    }
+    .timeline h2{
+        color: #333;
+        font-weight: 900;
+    }
+    .timeline p{
+
+        color: #666;
+        font-weight: 300;
+    }
+    .timeline h2:after{ /*旁邊線*/
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        background-color: #aaa;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: -1;
+    }
+    .timeline li:nth-child(odd) h2:after{
+        right: 0;
+    }
+    .timeline li:nth-child(even) h2:after{
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <h1>CSS零起手式 CSS Beginners</h1>
+        <a href="https://www.youtube.com/playlist?list=PLqivELodHt3hxeuLX8PYaI8u1GcDaBoJo">Source:金魚都能懂的網頁切版教學</a>
+        <ul class="timeline">
+            <li>
+                <a href="https://codepen.io/160san/pen/LYWqmmj">
+                    <h2>圖文滿版</h2>
+                    <p>https://codepen.io/160san/pen/LYWqmmj</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/qBrgGXK">
+                    <h2>互動圖文卡片</h2>
+                    <p>https://codepen.io/160san/pen/qBrgGXK</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/vYxMJmg">
+                    <h2>人員介紹卡片</h2>
+                    <p>https://codepen.io/160san/pen/vYxMJmg</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/VwpNROw">
+                    <h2>交錯漂浮版</h2>
+                    <p>https://codepen.io/160san/pen/VwpNROw</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/vYxwdzr">
+                    <h2>超通用橫式版面</h2>
+                    <p>https://codepen.io/160san/pen/vYxwdzr</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/zYZVNPP">
+                    <h2>網頁頁尾板塊</h2>
+                    <p>https://codepen.io/160san/pen/zYZVNPP</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/yLMdmZq">
+                    <h2>導覽列</h2>
+                    <p>https://codepen.io/160san/pen/yLMdmZq</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/oNZKvEB">
+                    <h2>導覽列變化</h2>
+                    <p>https://codepen.io/160san/pen/oNZKvEB</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/KKWOobz">
+                    <h2>網站麵包屑</h2>
+                    <p>https://codepen.io/160san/pen/KKWOobz</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/dyWbGrx">
+                    <h2>方塊酥版面</h2>
+                    <p>https://codepen.io/160san/pen/dyWbGrx</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/yLbBpqo">
+                    <h2>破格式設計</h2>
+                    <p>https://codepen.io/160san/pen/yLbBpqo</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/mdmdPeJ">
+                    <h2>表格怎麼切</h2>
+                    <p>https://codepen.io/160san/pen/mdmdPeJ</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/LYyYMGO">
+                    <h2>側邊選單怎麼切</h2>
+                    <p>https://codepen.io/160san/pen/LYyYMGO</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/jOmEBrN">
+                    <h2>訂單進度條</h2>
+                    <p>https://codepen.io/160san/pen/jOmEBrN</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/vYmEmBM">
+                    <h2>登入表單</h2>
+                    <p>https://codepen.io/160san/pen/vYmEmBM</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/160san/pen/gOWbVRB">
+                    <h2>訊息對話紀錄</h2>
+                    <p>https://codepen.io/160san/pen/gOWbVRB</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

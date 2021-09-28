@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人員介紹卡片多樣長條版 CSS introduction string version</title>
+    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap');
+        body{
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 16px;
+            background-color: #333;
+
+        } 
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        
+        
+        .all{
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1000px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .wrap{
+            width: 103%;
+            float:left; margin: 0px -1.5%; /*margin 110 origianl*/
+        }
+
+    /* all effects*/
+        .team{
+            width:280px; /*共同寬度*/
+            max-height: 300px;
+            min-height: 300px;
+            float: left; /*靠左浮動*/
+            margin: 30px 2.5%; 
+            background-color: #fff;
+            text-align: center; /*字置中*/
+            position:relative; /*相對定位*/
+            overflow: hidden;
+        }
+        .image img{
+            max-width: 100%;
+            width: 100%;
+            vertical-align: middle; /*垂直對齊*/
+            height: 300px;
+            
+        }
+        .txt{
+            height: 300px;
+            overflow: hidden;
+        }
+        
+         h1{
+            font-size: 24px;
+            font-weight: 400;
+            margin: 10px 0 0;
+            text-transform: uppercase; /*強制大寫*/
+            padding-top: 7px;
+            line-height: 33px;
+        }
+         h2{
+            font-size: 16px;
+            line-height: 22px;
+            border-bottom: 1px solid #888;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.4em;
+            font-weight: 900;
+            transition: 0.3s /*animation second*/
+        }
+        p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.6;
+            padding: 0 30px;
+            margin-bottom: 10px;
+            transition: 0.3s /*animation second*/
+        }
+        
+        .icon{
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            bottom:0;
+            height: 35px;
+            width: 100%;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .icon a{
+            display:inline-block; /*inline-block行內區塊以inline的方式呈現，但同時擁有block的屬性，可設定元素的寬高/margin/padding可水平排列*/
+            width: 27px;
+            height: 26px;
+            vertical-align: middle; /*垂直置中*/
+            margin: 0 2px;
+            padding-top: 6px;
+            background-repeat: no-repeat; /*不重複背景*/
+            opacity: 0.7; /*透明度*/
+            transition: 0.3s;
+      
+        }
+        .icon a:hover{
+            opacity: 1;
+            transition: 0.3s;
+        }
+        
+        /*
+        .fb{
+            background-position: 0 0;     
+        }
+        .tweet{
+            background-position: 0px 0;
+        }
+        .linkedin{
+            background-position: -71px 0;
+        }
+        .icon .fb{
+            background-position: 0 -27px;
+        }
+        .icon .tweet{
+            background-position: -35px -27px;
+        }
+        .icon .linkedin{
+            background-position: -71px -27px;
+        }
+*/
+
+
+    
+
+
+    /*-------------------item1---------------------------------*/
+            
+        .item1{
+            transform: translateY(0px); /*animation before*/
+            transition: 0.3s; /*animation second*/
+        }        
+        .item1:hover{
+            transform: translateY(-10%); /*animation after*/
+            background: #aaa;
+            transition: 0.3s;
+        }
+        .item1 .image{
+            position: relative;
+            transition: 0.3s;
+        }
+        .item1 img{
+            vertical-align: middle; /*使元素中部與父元素的基線+x height 的一半對齊*/
+            height: 300px;
+            transition: 0.3s;
+        }
+        .item1:hover img{
+            height: 0px;
+            transition: 0.3s;
+        }
+        
+        .item1 .txt{
+            height: 0px;
+        }
+        .item1:hover .txt{
+            position:absolute;
+            height: 300px;
+            padding-top: 40px;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            transition: 0.3s;
+        }
+        .item1 .txt:before{ /*偽元素*/
+            content:''; /*need to be typed in or will be none.*/
+            position: absolute; /*positioning on .item .txt*/
+            width: 0;
+            height: 0;
+            left: 0;
+            bottom: 0;
+            border-bottom: 50px solid #bbb;
+            border-left: 140px solid transparent; /*368/2*/
+            border-right: 140px solid transparent; /*368/2*/
+            transition: 0.3s;
+        }
+        .item1:hover .txt:before{
+            content:''; /*need to be typed in or will be none.*/
+            position: absolute; /*positioning on .item .txt*/
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid #bbb;
+            border-bottom: 0px;
+            border-left: 140px solid transparent; /*368/2*/
+            border-right: 140px solid transparent; /*368/2*/
+            transition: 0.3s;
+        }
+       
+        .item1:hover h1{ /* h2 color changed animation */
+            color: #fff;
+            border-bottom-color: #fff;
+            transition: 0.3s;
+        }
+        .item1:hover h2{ /* h2 color changed animation */
+            color: #fff;
+            transition: 0.3s;
+        }
+        
+        .item1:hover p{ /*p color changed animation */
+            color: #fff;
+            transition: 0.3s;
+        }
+        
+     
+        .item1 .icon{
+            background: transparent;
+            position: absolute;
+            left: 0;
+            bottom:0;
+            height: 35px;
+            width: 100%;
+            overflow: hidden;
+            transition: 0.3s;
+            display: none;
+        }
+        .item1:hover .icon{
+            display: inline-block;
+            transition: 0.3s;
+            background-color: #bbb;
+        }
+       
+
+
+    
+  
+/*-------------------item2---------------------------------*/
+                 
+        .item2{
+            
+            position:relative;
+        }
+        .item2:hover{
+            transform: translateY(10%);
+            transition: 0.3s;
+        }
+        .item2 .txt{
+            margin-top: 20px;
+            height: 0;
+            
+        }
+        .item2:hover .txt{
+            height: 300px;
+            transition: 0.3s;
+        }
+        .item2 .txt::before{
+            content:''; /*need to be typed in or will be none.*/
+            position: absolute; /*positioning on .item .txt*/
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid #bbb;
+            border-left: 140px solid transparent; /*368/2*/
+            border-right: 140px solid transparent; /*368/2*/
+            transition: 0.3s;
+            z-index: 9;
+        }
+        .item2:hover .txt::before{
+            display: none;
+        }
+        .item2:hover .txt:after{
+            content:''; /*need to be typed in or will be none.*/
+            position: absolute; /*positioning on .item .txt*/
+            width: 0;
+            height: 0;
+            left: 0;
+            bottom: 0;
+            border-bottom: 50px solid #bbb;
+            border-top: 0px;
+            border-left: 140px solid transparent; /*368/2*/
+            border-right: 140px solid transparent; /*368/2*/
+            transition: 0.3s;
+            z-index: 9;
+        }
+        
+        
+        .item2 img{
+            height: 300px;
+            margin-top: -20px;
+            transition: 0.3s;
+        }
+        .item2:hover img{
+            height: 0;
+            transition: 0.3s;
+        }
+        .item2 .icon{
+            display: none;
+        }
+        .item2:hover .icon{
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            background-color: #bbb;
+
+        }
+        .item2 img{
+            height: 300px;
+        }
+/*-------------------item3---------------------------------*/
+        .item3 .image{
+            position: relative;
+        }
+        .item3 img{
+            height: 300px;
+        }
+        .item3:hover .txt{
+            position: absolute;
+            height: 300px;
+            left: 0;
+            bottom: 0;
+            backdrop-filter: blur(100px);
+        }   
+        .item3 h2{
+            border-bottom-color: black;
+        }
+
+
+        
+/*-------------------item4---------------------------------*/
+        .item4 img{
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s;
+        }
+        .item4 .txt{
+            position: relative;
+            transition: 0.3s;
+        }
+        .item4 .icon{
+            height: 0;
+        }
+     
+        .item4:hover img{
+            height: 0;
+            transition: 0.3s;
+        }
+
+        .item4:hover .icon{
+            height: 26px;
+            padding-top: 6px;
+            transition: 0.3s;
+        }
+/*-------------------item5---------------------------------*/
+
+        .item5 img{
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s;
+            opacity: 1;
+            z-index: 8;
+        }
+        .item5 .txt{
+            position: relative;
+            transition: 0.3s;
+        }
+        .item5 .icon{
+            height: 0;
+            transition: 0.3s;
+        }
+     
+        .item5:hover img{
+            opacity: 0;
+            transition: 0.3s;
+            z-index: 9;
+        }
+
+        .item5:hover .icon{
+            height: 26px;
+            padding-top: 6px;
+            transition: 0.3s;
+        }
+        
+ 
+/*-------------------item6---------------------------------*/
+        .item6{
+            perspective: 800px; /*透視*/
+        } 
+        .item6 .image{
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s;
+            z-index: 5;
+        }
+        .item6 img{
+            height: 300px;
+            transition: 0.3s;
+        }
+        .item6 .txt{
+            position: relative;
+            transition: 0.3s;
+        }
+        .item6 .icon{
+            height: 26px;
+            padding-top: 6px;
+            margin-bottom: 24px;
+            transition: 0.3s;
+            z-index:3;
+            background-color:transparent;
+        }
+     
+        .item6:hover .image{
+            transition: 0.3s;
+            transform: rotateX(95deg);
+            transform-origin: center bottom 0;
+            z-index: 5;
+        }
+
+
+     
+/*-------------------item7---------------------------------*/
+      
+        .item7{
+            max-height: 300px;
+            min-height: 300px;
+            overflow:hidden;
+        }
+        .item7 h1{
+            padding-top: 7px;
+            line-height: 33px;
+        }
+        .item7 .image{
+            height: 300px;
+            overflow: hidden;
+            width: 100%;
+            transition: 0.3s;
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+        } 
+        .item7 img{
+            height: 300px;
+
+        }
+        .item7 .icon{
+            display: none;
+        }
+        
+        .item7:hover .txt{
+            transition:0.3s;
+        }
+        
+        .item7 .image img{
+             width: 100%;
+             vertical-align: bottom;
+
+        }
+        .item7:hover .image {
+            border-bottom: 0;
+            border-radius: 50%;
+            height: 80px;
+            display: inline-block;
+            overflow: hidden;
+            width: 80px;
+            transition: 0.3s;
+        }
+
+        .item7:hover .icon{
+            display: inline-block;
+            background-color: #fff;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            padding: 6px 0;
+            height: 35px;
+            width: 100%;
+            transition: 0.3s;
+            position:absolute;
+        }
+
+        .item7:hover .icon a{
+            display:inline-block;
+            padding-top: 6px;
+        }
+
+        
+        
+      
+    /*-------------------item8---------------------------------*/
+       
+        .item8{
+            max-height: 300px;
+            min-height: 300px;
+            overflow:hidden;
+        }
+        
+        .item8 .image{
+            height: 300px;
+            overflow: hidden;
+            width: 100%;
+            transition: 0.3s;
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+        } 
+        .item8 img{
+            height: 300px;
+            z-index: 9;
+        }
+        
+        .item8:hover .image {
+            height: 0px;
+            transition: 0.3s;
+        } 
+        .item8 .image img{
+             width: 100%;
+             vertical-align: bottom;
+             }
+        .item8:hover .txt{
+            transition:0.3s;
+        }
+
+        .item8 .icon{
+            display: none;
+        }
+
+        .item8:hover .icon{
+            background-color: #fff;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            padding: 6px 0;
+            height: 35px;
+            width: 100%;
+            transition: 0.3s;
+            position:absolute;
+            display:inline-block;
+        }
+        .item8:hover .icon a{
+            padding-top: 6px;
+        }
+
+      
+        
+     
+
+    /*-------------------item9---------------------------------*/
+        .item9{
+            max-height: 300px;
+            min-height: 300px;
+            background-color: transparent;
+        }
+        .item9 .image{
+            position: relative;            
+        }
+        .item9:hover .txt{
+            position: absolute;
+            height: 300px;
+            width: 100%;
+            bottom:0;
+            left: 0;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.7);
+            transition: 0.3s;
+        }
+
+        .item9:hover .image img{
+            border-color: #bbb;
+            transition: 0.3s;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .item9 .icon{
+            display:none;
+        }
+        .item9:hover .icon{
+            display: inline-block;
+            background-color: transparent;
+            transition: 0.3s;
+        }
+        
+
+
+
+    </style>
+     
+
+</head>
+<body>
+    <div class="all">
+        <!-------------structure--------------------------------------->
+        <div class="wrap">
+
+
+            <!--------------item1---------------------------------->
+
+            <div class="team item1">
+                <div class="image">
+                <img src="https://3.bp.blogspot.com/-CikzlG8fdMs/WF4V7-YLdrI/AAAAAAABAo0/f9DZB3LiCL4sIp-l0Pm-DYroqRSStIf6wCLcB/s1600/30937979784_34e1a6c046_c.jpg">
+                </div>
+                <div class="txt">
+                    <h1>零號機</h1>
+                    <h2>Evangelion</h2>
+                    <p>最早開發成功的試用型EVA，駕駛者是第一適格者綾波零。</p>
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+             <!--------------item2---------------------------------->
+        
+            <div class="team item2">
+                
+                <div class="txt">
+                    <h1>初號機</h1>
+                    <h2>Evangelion</h2>
+                    <p>最先擁有S2機關的特殊核心機體，該機體擁有了（理論上）無限的動力，加上有著生命之果的使徒肉體（因此擁有極優秀的自我再生能力）和智慧之果的碇唯靈魂。</p>
+                </div>
+                <div class="image">
+                <img src="https://images.goodsmile.info/cgm/images/product/20180529/7315/52318/large/8058e3ea8c64961708b44e0365c4d6b9.jpg">
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+             <!--------------item3--------------------------------->
+
+            <div class="team item3">
+                <div class="image">
+                <img src="https://images.goodsmile.info/cgm/images/product/20210329/11004/82921/large/c0e1414c5037c85b7c97e21b95e5ccdf.jpg">
+                </div>
+                <div class="txt">
+                    <h1>二號機</h1>
+                    <h2>Evangelion</h2>
+                    <p>世上第一台為實戰而製造的EVA，也是第一架不需外部指令就能由駕駛員從EVA外部自行啟動的EVA。</p>
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+             <!--------------item4---------------------------------->
+
+             <div class="team item4">
+                <div class="txt">
+                    <h1>六號機</h1>
+                    <h2>Evangelion</h2>
+                    <p>6號機命名為Mark 06（Mark Six），由使徒渚薰駕駛，SEELE稱之為「真正的EVA」。
+
+                        造型與初號機有少許接近，頭上有角及光環，塗裝為藍色，眼睛由紅色V字型眼罩遮蓋。</p>
+                </div>
+                <div class="image">
+                <img src="http://img.alicdn.com/imgextra/i2/2618062673/O1CN01JS9i8v1VcHFyxJcRz_!!2618062673.jpg">
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+             <!--------------item5---------------------------------->
+
+             <div class="team item5">
+                <div class="txt">
+                    <h1>碇真嗣</h1>
+                    <h2>初號機駕駛者</h2>
+                    <p>真嗣是一個14歲的少年，被父親碇源堂召喚到第3新東京市，駕駛巨大人型兵器EVA初號機，與不斷來襲的被稱為「使徒」的神秘敵人戰鬥。他性格內向，不擅長與他人交流。</p>
+                </div>
+                <div class="image">
+                <img src="https://img.ruten.com.tw/s0/0b7/281/asdfx1/e/2f/73/22033103666035_199.jpg">
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+             <!--------------item6---------------------------------->
+
+             <div class="team item6">
+                <div class="txt">
+                    <h1>綾波零</h1>
+                    <h2>零號機駕駛者</h2>
+                    <p>綾波零是一名沉默寡言的14歲少女，駕駛著EVA試作零號機對抗使徒。她個性冷漠、彷彿沒有感情，對自己的存在感到消極、空虛，但隨著故事推進，在與男主角碇真嗣進行一系列的互動後，她逐漸有情感化的表現。</p>
+                </div>
+                <div class="image">
+                <img src="https://images.goodsmile.info/cgm/images/product/20170714/6589/46559/large/16524084ce94701d818e37ec162610cd.jpg">
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!--------------item7---------------------------------->
+
+            <div class="team item7">
+                
+                <div class="image">
+                <img src="https://images.goodsmile.info/cgm/images/product/20170822/6662/47123/large/b9f4b1366125c5826dcbe59e831978db.jpg">
+                </div>
+                <div class="txt">
+                    <h1>惣流·明日香·蘭格雷</h1>
+                    <h2>二號機駕駛者</h2>
+                    <p>駕駛EVA貳號機抗擊使徒。她個性好強、富有行動力，但是隨著劇情的發展，她的自尊心逐漸崩潰。</p>
+                </div>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!--------------item8---------------------------------->
+            <div class="team item8">
+               
+                <div class="image">
+                <img src="https://images.goodsmile.info/cgm/images/product/20210329/11003/82911/large/2e22ab75b9310062780f8e78ae5760e3.jpg">
+                </div>
+                <div class="txt">
+                    <h1>渚薰</h1>
+                    <h2>六號機駕駛者</h2>
+                    <p>EVA駕駛員，登場不久便成功打開主角碇真嗣閉塞的心靈。但他真正身份是人類的敵人、最後的使徒Tabris，最終真嗣不情願地動手殺他，而他也自願受死。</p>
+                </div>
+                
+                  <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+            <!--------------item9---------------------------------->
+            <div class="team item9">
+                <div class="image">
+                <img src="https://160san.com/wp-content/uploads/2021/06/IMG_E4549-150x150.jpg">
+                </div>
+                <div class="txt">
+                    <h1>百六</h1>
+                    <h2>被程式設計駕駛者</h2>
+                    <p>身高一百六，社會主觀價值為「全殘」，最近還被名為「程式設計」的領域駕馭且痛苦不堪的男子，但仍為理想努力打拚，賣力一搏的生活著。我可以，相信您也可以!</p>
+                <div class="icon">
+                    <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                    <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                </div>
+                
+            </div>     
+         
+
+
+                           
+        </div>
+    </div>
+</body>
+</html>

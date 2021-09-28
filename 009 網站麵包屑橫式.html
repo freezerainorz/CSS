@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+
+    }
+    .back{
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        width: 100px;
+    }
+    ul{
+        display: block;
+        margin-bottom: 0;
+        list-style: none;
+    }
+    li{
+        white-space: nowrap;
+    }
+    li a{
+        text-decoration: none;
+    }
+    .nav-history{
+        padding-left: 36px;
+        padding-top: 25px;
+        pointer-events: none; /*no pointer when hovering*/
+    }
+    .nav-history li{
+        margin-bottom: 5px;
+    }
+    .nav-history li::after{  /*point*/
+        content:'';
+        position: absolute;
+        left: 12px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #e8eaed;
+        transform: scale(0.9);  /* resize element*/
+        transition: all 0.2s ease;
+    }
+   
+    .nav-history li:not(:last-child)::before{  /*line*/
+        content:'';
+        position: absolute;
+        left: 17px;
+        margin-top: 10px;
+        width: 2px;
+        height: 28px;
+        background: #e8eaed;
+        transition: all 0.2s ease;
+        
+    }
+    .nav-history li.active{
+        pointer-events:none;
+    }
+    .nav-history li.active::after{
+        background: #e8eaed;
+    }
+    .nav-history li.active a{
+        color: #5a667f;
+    }
+    .nav-history  a{
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.2s ease;
+        color:rgb(22, 22, 22);
+    }
+    .nav-links{
+        position: absolute;
+        transform: translateY(-10px);
+        margin-top: 20px;
+        padding-left: 12px;
+        opacity: 0;
+        transition: all 0.2 ease;
+        pointer-events: none;
+    }
+    .nav-links li:not(:last-child){ /*除了最後一個其他變化 elements that do not match a list of selectors.*/
+        margin-bottom: 5px;
+    }
+    .nav-links  a {
+        font-size: 14px;
+        font-weight: 600;
+        color: #c8ccd4;
+        transition: color 0.2s ease; /*color transition*/
+    }
+    .nav-links li a:hover{
+        color: #9098a9;
+    }
+    .back:hover{
+        width: auto;
+    }
+    .back:hover .menu-back{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .back:hover .btn-back span{
+        transform: translateX(0);
+        opacity: 1;
+        color: rgb(22, 22, 22);
+    }
+    .back:hover .nav-history li{
+        pointer-events: auto;
+    }
+    .back:hover .nav-history li::after{
+        transform: translateY(6px);
+    }
+    .back:hover .nav-history li.active::after{
+        background: #5a667f;
+    }
+    .back:hover .nav-history a{
+        opacity: 1;
+        transform: translateY(0);
+        color: rgb(22, 22, 22);
+    }
+    .back:hover .nav-links{
+        position: relative;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    .btn-back{
+        display: inline-block;
+    }
+    .btn-back div{
+        position: relative;
+        z-index: 1;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #e8eaed;
+        float: left;
+    }
+    .btn-back svg{
+        fill: none;
+        transform: translate(10px, 2px);
+    }
+    .btn-back path,
+    .btn-back polyline{
+        stroke: #9098a9; /*learn*/
+        stroke-width: 2;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+    }
+    .btn-back span {
+        display: inline-block;
+        margin-left: 10px;
+        line-height: 34px;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="#" class="btn-back">
+          <div>
+            <svg width="16px" height="14px" viewBox="0 0 16 14">
+              <path d="M1,7 L15,7"></path>
+              <polyline points="7 1 1 7 7 13"></polyline>
+            </svg>
+          </div>
+          <span>Back</span>
+        </a>
+        <div class="menu-back">
+          <ul class="nav-history">
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">人生壹書</a></li>
+            <li class="active"><a href="#">人生壹影</a></li>
+          </ul>
+          <ul class="nav-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Support / Help</a></li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>

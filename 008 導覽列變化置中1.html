@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導覽列</title>
+    <style type="text/css">
+        @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-family: 'Noto Sans TC', sans-serif;
+                
+            }
+            .main-header{
+                background-color: rgba(38,39,42,0.7);
+            }
+            .main-header .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                max-width: 1200px;
+                margin: auto;
+                height: 120px;
+            }
+           
+            .main-header .logo{
+                width: 100px;
+                text-decoration: none;
+                position:absolute;
+            }
+            .main-header .logo img{
+                border: 1px solid #26272B;
+                border-radius: 10px;
+                width: 100%;
+                vertical-align: middle;
+            }
+            .main-header .logo h2{
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .main-header .main-nav{
+                display: flex;
+                position: relative;
+            }
+           
+            
+            .main-header .main-nav a{
+                text-decoration: none;
+                color: #fff;
+                padding: 5px 1em;
+                transform: translateY(0px);
+                transition: 0.3s;
+            }
+            .main-header .main-nav a:nth-child(3){
+                margin-left: 140px;
+            }
+            .main-header .main-nav a:hover{
+                transform: translateY(-5px);
+            }
+            .main-header .main-nav a:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: -5px;
+                height: 0;
+                border-bottom: 1px solid #fff;
+            }
+            .main-header .main-nav a:hover:after{
+                left: 0;
+                right: 0;
+                bottom: -5px;
+                height: 0;
+                border-bottom: 1px solid #fff;
+                transition: 0.3s;
+            }
+      
+    </style>
+</head>
+<body>
+    
+<div class="main-header">
+    <div class="container">
+        <a href="/" class="logo">
+        <img src="https://160san.com/wp-content/uploads/2021/06/cropped-6.png">
+        <h2>壹陸零人生</h2>
+        </a>
+        <nav class="main-nav">
+            <a href="/">CATEGORIES</a>
+            <a href="/">About Me</a>
+            <a href="/">Donate Me</a>
+            <a href="/">Privacy Policy</a>
+        </nav>
+      
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

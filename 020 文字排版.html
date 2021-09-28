@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字排版</title>
+    <style type="text/css">
+
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+
+    }
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        padding: 100px 0;
+    }
+    .container h1{
+        width: 400px;
+        text-align: right;
+        box-sizing: border-box;
+        padding: 0 15px;
+        background-color: #eee;
+
+    }
+    .container h1:after{  /*線*/
+        content:'';
+        display: block;
+        height: 4px;
+        width: 4em;
+        background-color: #000;
+        margin-left: auto;
+        
+    }
+    .container .txt{
+        width: 800px;
+        text-align: left;
+        box-sizing: border-box;
+        padding: 0 30px;
+        column-count: 2;
+        column-gap: 30px;
+
+    }
+
+
+    /*----------第二種----------------------*/
+    .container1{
+        width: 1200px;
+        margin: auto;
+        padding: 100px 0;
+    }
+    .container1 h1{
+        width: 300px;
+        text-align: right;
+        box-sizing: border-box;
+        padding: 15px;
+        border-right: 3px solid #000;
+        float: left; /*文繞圖*/
+        margin-right: 0.5em;
+        font-size: 42px;
+    }
+    
+    .container1 .txt{
+        text-align: left;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+
+    /*-------第三種-----------------------*/
+    
+    .container2{
+        width: 1200px;
+        margin: auto;
+        padding: 100px 0;
+    }
+    .container2 h1{
+        box-sizing: border-box;
+        margin-right: 0.5em;
+        margin-bottom: 30px;
+        font-size: 100px;
+        color: #aaa;
+        position: relative;
+    }
+    .container2 h1:after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 70px;
+        bottom: 0;
+        background-color: #eee;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .container2 .txt{
+        text-align: left;
+        box-sizing: border-box;
+        padding: 0 15px;
+        column-count: 2px;
+        column-gap: 30px;
+    }
+    .container2 .txt p:first-letter{ /*learn*/
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+
+     /*-------第四種-----------------------*/
+
+    .container3{
+        position: relative;
+        width: 1200px;
+        margin: auto;
+    }
+    .container3 h1{
+        width: 400px;
+        box-sizing: border-box;
+        padding: 15px;
+        background-color: #eee;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-left: 110px;
+    }
+    .container3 .txt{
+        
+        column-count: 2;
+        column-gap: 460px; /*400+30+30*/
+    }
+    .container3 p{
+        line-height: 1.6;
+        margin-bottom: 1em;
+    }
+    .container3 p:first-child:first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 6px;
+    }
+     /*-------第五種-----------------------*/
+
+     .container4{
+        position: relative;
+        width: 1200px;
+        margin: 100px auto;
+    }
+    .container4 h1{
+        width: 400px;
+        box-sizing: border-box;
+        padding: 15px;
+        color: #aaa;
+        float: right;
+        font-size: 70px;
+        position: relative;
+        
+    }
+    .container4 h1:before{
+        content:'';
+        display: block;
+        position: absolute;
+        right: 50px;
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        border: 30px solid #F1c555;
+        transform: rotate(20deg);
+        
+
+    }
+    .container4 .txt{
+        column-count: 2;
+        column-gap: 30px;
+    }
+    .container4 p{
+        line-height: 1.6;
+        margin-bottom: 1ex;
+     
+    }
+    /*-------第五種-----------------------*/
+
+     .container4{
+        position: relative;
+        width: 1200px;
+        margin: 100px auto;
+    }
+    .container4 h1{
+        width: 400px;
+        box-sizing: border-box;
+        padding: 15px;
+        color: #aaa;
+        float: right;
+        font-size: 70px;
+        position: relative;
+        
+    }
+    .container4 h1:before{
+        content:'';
+        display: block;
+        position: absolute;
+        right: 50px;
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        border: 30px solid #F1c555;
+        transform: rotate(20deg);
+        
+
+    }
+    .container4 .txt{
+        column-count: 2;
+        column-gap: 30px;
+    }
+    .container4 p{
+        line-height: 1.6;
+        margin-bottom: 1ex;
+     
+    }
+
+    /*-------第六種-----------------------*/
+
+    .wrap5{
+        margin: 100px 30px;
+    }
+    .container5{
+        width: 1200px;
+        display: flex;
+    }
+    .container5 h1{
+        width:400px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        order: 1;
+        font-size: 70px;
+        padding-left: 15px;
+        color: #aaa;
+        position: relative;
+    }
+    .container5 h1::before{
+        content:'';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 50px;
+        border: 30px solid rgb(85, 83, 83);
+        transform: rotate(20deg);
+        z-index: -1;
+    }
+    .container5 h1::after{
+        content:'';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 50px;
+        border: 30px solid rgb(97, 93, 93);
+        transform: rotate(10deg);
+        z-index: -1;
+    }
+    .container5 .txt{
+        width:800px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+        box-shadow: 0 0 30px #ccc;
+    }
+    .container5 .txt P{
+        margin-bottom: 1em;
+    }
+    .container5 .txt p:first-child:first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+
+    /*-------第七種-----------------------*/
+
+    .wrap6{
+        margin: 100px 30px;
+    }
+    .container6{
+        width: 1200px;
+        display: flex;
+    }
+    .container6 h1{
+        width:400px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        font-size: 70px;
+        padding-left: 15px;
+        color: #aaa;
+        transform: rotate(90deg) translateY(-400px);
+        transform-origin: left top;
+    }
+
+    .container6 .txt{
+        width:800px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+        box-shadow: 0 0 30px #ccc;
+    }
+    .container6 .txt P{
+        margin-bottom: 1em;
+    }
+    .container6 .txt p:first-child:first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+
+    /*-------第八種-----------------------*/
+
+    .wrap7{
+        margin: 100px 30px;
+    }
+    .container7{
+        width: 1200px;
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 0 30px #ccc;
+        position: relative;
+        overflow: hidden;
+    }
+    .container7 h1{
+        width:100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        font-size: 200px;
+        padding-left: 15px;
+        color: #eee;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        top: 0;
+        line-height: 0.8em;
+    }
+
+    .container7 .txt{
+        width:600px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+    }
+    .container7 .txt P{
+        margin-bottom: 1em;
+    }
+    .container7 .txt p:first-child:first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+    /*-------第九種-----------------------*/
+    
+    .wrap8{
+        margin: 100px 30px;
+    }
+    .container8{
+        width: 1200px;
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 0 30px #ccc;
+        position: relative;
+        overflow: hidden;
+    }
+    .container8 h1{
+        width:100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        font-size: 200px;
+        padding-left: 15px;
+        color: #fff;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        top: 0;
+        line-height: 0.8em;
+        text-shadow: 6px 6px 0px #ccc;
+    }
+
+    .container8 .txt{
+        width:600px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+    }
+    .container8 .txt P{
+        margin-bottom: 1em;
+    }
+    .container8 .txt p:first-child:first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+
+    /*-------第十種-----------------------*/
+
+    .wrap9{
+        margin: 100px 30px;
+        background-color: #000;
+    }
+    .container9{
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    .container9 h1{
+        width:50%;
+        display: inline-block;
+        margin-top: 50px;
+        box-sizing: border-box;
+        font-size: 80px;
+        background-color: #a00;
+        color: #fff;
+        margin-bottom: 0.5em;
+        
+       
+    }
+
+    .container9 .txt{
+        flex-shrink: 0;
+        box-sizing: border-box;
+        color: #fff;
+    }
+    .container9 .txt P{
+        display: inline-block;
+        margin-bottom: 30px;
+        font-size: 26px;
+        padding: 0 100px;
+    }
+    .container9 .txt p:first-child:first-letter{
+        font-size: 40px;
+    }
+
+      /*-------第十一種-----------------------*/
+    .wrap10{
+        margin: 100px 30px;
+    }
+    .container10{
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    .container10 h1{
+        width:100%;
+        display: inline-block;
+        margin-top: 50px;
+        box-sizing: border-box;
+        font-size: 80px;
+        color: #aaa;
+        margin-bottom: 0.5em;
+    }
+    .container10 h1::before,
+    .container10 h1::after{
+        content:'';
+        display: block;
+        height: 5px;
+        width: 2em;
+        background-color: #aaa;
+        margin: auto;
+    }
+
+    .container10 .txt{
+        flex-shrink: 0;
+        box-sizing: border-box;
+        color: #000;
+    }
+    .container10 .txt P{
+        display: inline-block;
+        margin-bottom: 30px;
+        font-size: 26px;
+        padding: 0 100px;
+    }
+    .container10 .txt p:first-child:first-letter{
+        font-size: 40px;
+    }
+
+    /*-------第十二種-----------------------*/
+
+    .wrap11{
+        margin: 100px 30px;
+    }
+    .container11{
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    .container11 h1{
+        width:100%;
+        display: flex;
+        margin-top: 50px;
+        box-sizing: border-box;
+        font-size: 80px;
+        color: #aaa;
+        margin-bottom: 0.5em;
+    }
+    .container11 h1::before,
+    .container11 h1::after{
+        content:'';
+        display: block;
+        height: 5px;
+        background-color: #aaa;
+        margin: 1em;
+        flex-grow: 1;
+    }
+
+    .container11 .txt{
+        flex-shrink: 0;
+        box-sizing: border-box;
+        color: #000;
+    }
+    .container11 .txt P{
+        display: inline-block;
+        margin-bottom: 30px;
+        font-size: 26px;
+        padding: 0 100px;
+    }
+    .container11 .txt p:first-child:first-letter{
+        font-size: 40px;
+    }
+
+    /*-------第十三種-----------------------*/
+
+    .wrap12{
+        margin: 100px 30px;
+    }
+    .container12{
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    .container12 h1{
+        width:100%;
+        margin-top: 50px;
+        box-sizing: border-box;
+        font-size: 80px;
+        color: #aaa;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+  
+
+    .container12 .txt{
+        box-sizing: border-box;
+        color: #000;
+        position: relative;
+    }
+    .container12 .txt P{
+        display: inline-block;
+        margin-bottom: 30px;
+        font-size: 26px;
+        padding: 20px 100px;
+    }
+    .container12 .txt::before,
+    .container12 .txt::after{
+        content:'';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+    .container12 .txt::before{
+        left: 50px;
+        top: 0;
+        border-top:3px solid #aaa;
+        border-left: 3px solid #aaa;    
+    }
+    .container12 .txt::after{
+        right: 50px;
+        bottom: 0;
+        border-bottom:3px solid #aaa;
+        border-right: 3px solid #aaa;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap9">
+        <div class="container9">
+            <h1>FBI WARNING</h1>
+            <div class="txt">
+                <p>Federal law provides severe civil  and criminal penalties for the unauthorized reproduction,distribution,or exhibition of copyrighted motion prictures(Title 17, United States Code, Sections 501 and 508). The federal bureau of Investigation investigate allegations of criminal copyright infringement.<br>(Title 17, United States Code, Section 506)</p>
+
+                   
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap1">
+        <div class="container1">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap2">
+        <div class="container2">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap3">
+        <div class="container3">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap4">
+        <div class="container4">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap5">
+        <div class="container5">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap6">
+        <div class="container6">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap7">
+        <div class="container7">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap8">
+        <div class="container8">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="wrap">
+        <div class="container">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap10">
+        <div class="container10">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap11">
+        <div class="container11">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap12">
+        <div class="container12">
+            <h1>《出師表》</h1>
+            <div class="txt">
+                <p>臣亮言：先帝創業未半，而中道崩殂。今天下三分，益
+                    州疲敝，此誠危急存亡之秋也！然侍衞之臣，不懈於內；忠
+                    志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。
+                    誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲
+                    薄，引喻失義，以塞忠諫之路也。
+                    </p>
+                <p>宮中、府中，俱為一體；陟罰臧否，不宜異同。若有作
+                    奸、犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平
+                    明之治；不宜偏私，使內外異法也。</p>
+                <p>侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠
+                    純，是以先帝簡拔以遺陛下。愚以為宮中之事，事無大小，
+                    悉以咨之，然後施行，必能裨補闕漏，有所廣益。將軍向寵，
+                    性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是
+                    以眾議舉寵為督。愚以為營中之事，事無大小，悉以咨之，
+                    必能使行陣和睦，優劣得所也。
+                    </p>
+                <p>親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，
+                    此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息
+                    痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節
+                    之臣也，願陛下親之信之，則漢室之隆，可計日而待也。</p>
+                <p>臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於
+                    諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮
+                    臣以當世之事；由是感激，遂許先帝以驅馳。後值傾覆，受
+                    任於敗軍之際，奉命於危難之間，爾來二十有一年矣！先帝
+                    知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐
+                    託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方
+                    已定，兵甲已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除
+                    奸凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之
+                    職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。</p>
+                <p>願陛下託臣以討賊興復之效；不效，則治臣之罪，以告
+                    先帝之靈。若無興德之言，則責攸之、禕、允等之 咎，以彰
+                    其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺
+                    詔。臣不勝受恩感激。今當遠離，臨表涕泣，不知所云。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

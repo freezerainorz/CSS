@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速版面拼拼樂</title>
+    <style type="text/css">
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+
+    }
+
+    .main-header{
+                background-color: rgba(38,39,42,0.7);
+    }
+    .main-header .container{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .main-header .logo{
+        width: 100px;
+        text-decoration: none;
+    }
+    .main-header .logo img{
+        border: 1px solid #26272B;
+        border-radius: 10px;
+        width: 100%;
+        vertical-align: middle;
+    }
+    .main-header .logo h2{
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .main-header .main-nav{
+        margin: auto;
+        display: flex;
+        position: relative;
+    }
+    .main-header .main-nav a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 1em;
+        transform: translateY(0px);
+        transition: 0.3s;
+    }
+    .main-header .main-nav a:hover{
+        transform: translateY(-5px);
+    }
+    .main-header .main-nav a:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -5px;
+        height: 0;
+        border-bottom: 1px solid #fff;
+    }
+    .main-header .main-nav a:hover:after{
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 0;
+        border-bottom: 1px solid #fff;
+        transition: 0.3s;
+    }
+    .main-header .header-search{
+        display: flex;
+    } 
+    .main-header .header-search button,
+    .main-header .header-search input{
+        border: none;
+        background-color: #fff;
+        padding: 5px 10px;
+    } 
+    .main-header .header-search button:focus,
+    .main-header .header-search input:focus{
+        outline: none; /*消除輸入框內外藍框*/
+    }
+    .main-header .header-search button{
+        border-radius: 0 200px 200px 0;
+    } 
+    .main-header .header-search input{
+        border-radius: 200px 0 0 200px;
+        
+    } 
+
+    .banner{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(24deg, #f3e7e9 0%, #e3eeff 14%, #e3eeff 50%,transparent 50%) center center / 100% 100%,
+        url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?cs=srgb&dl=pexels-negative-space-169573.jpg&fm=jpg) right center / auto 100%;
+        /*multiple background: linear-gradient(degree, color 50%, trasparent 50%) background position / width height, pic width height / width height ) */ 
+        
+    }
+    .banner .containter{
+        width: 100%;
+        margin: auto;
+    }
+    .banner-txt{
+        height: 100%;
+        display: flex;
+        flex-direction: column; /*main axis*/
+        justify-content: center; /*cross axis*/
+        align-items: flex-start;
+        padding-left: 30px;
+        padding-top:300px;
+        
+        
+    }
+
+    .banner-txt h1{
+        font-size: 80px;
+        font-weight: 900;
+        border-bottom: 3px solid #333;
+    }
+    
+    .banner-txt h1 small{
+        display: block;
+        font-size: 53px;
+        font-weight: 700;
+    }
+    .banner-txt h2{
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .banner-txt p{
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+
+    .main-title .container11{
+        width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    .main-title .container11 h1{
+        width:100%;
+        display: flex;
+        margin-top: 50px;
+        box-sizing: border-box;
+        font-size: 80px;
+        color: rgba(49,61,61);
+    }
+    .main-title .container11 h1::before,
+    .main-title .container11 h1::after{
+        content:'';
+        display: block;
+        height: 5px;
+        background-color: rgba(49,61,61);
+        margin: 1em;
+        flex-grow: 1;
+    }
+
+    .main-title .container11 .txt{
+        flex-shrink: 0;
+        box-sizing: border-box;
+        color: #000;
+    }
+    .main-title .container11 .txt P{
+        display: inline-block;
+        margin-bottom: 30px;
+        font-size: 26px;
+        padding: 0 100px;
+    }
+    .main-title .container11 .txt p:first-child:first-letter{
+        font-size: 40px;
+    }
+    
+    .fish{
+        display: flex;
+        width: 1200px;
+        margin: 100px auto;
+        margin: auto;
+        padding-top: 75px; /*補回上圓框大小*/
+    }
+    .fish .item{
+        width: 370px;
+        margin: 0 15px;
+        text-align: center;
+        border: 10px solid rgb(31, 28, 29);
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 10px 20px 50px #000;
+    }
+    .fish .item h3{
+        color:rgb(49, 61, 61);
+        font-weight: 700;
+        font-size: 40px; 
+    }
+    .fish .item p{
+        color: rgb(56, 56, 56);
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    .fish .item .icon{
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        margin: auto;
+        margin: -75px auto 0;
+        font-size: 85px;
+        line-height: 150px; /*圖片居中*/
+        border-radius: 50%;
+        color: rgb(56, 28, 77);
+        position: relative;
+    }
+    .fish .item .icon:before{ /*圓框上格線*/
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-top: 10px solid #000;
+        border-right: 10px solid #000;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        left: -10px;
+        top: -10px;
+        border-radius: 50%;
+        transform: rotate(-45deg);
+    }
+    .fish .item:hover .fas{
+        animation: ss 0.2s linear infinite alternate;
+    }
+    .fish .item .txt{
+        padding: 20px 20px 2em;
+    }
+
+    @keyframes ss{  /*動畫*/
+        0%{ transform: rotate(-10deg);}
+        100%{ transform: rotate(10deg);}
+    }
+
+    .student{
+        display: flex;
+        align-items: center;
+    }
+    .student .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .student .item{
+        width: 370px;  /*400-15*2*/
+        margin: 0 15px; 
+        display: flex;
+        background-color: #fff;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.5);  /* X軸 Y軸 模糊度*/
+        
+    }
+    .student .item .pic{
+        width: 50%;
+    }
+    .student .item .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .student .item .txt{
+        width: 50%;
+        padding-left: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .student .item .txt h2{
+        margin-bottom: 0.4em;
+        font-weight: 700;
+
+    }
+    .student .item .txt p{
+        font-weight: 300;
+    } 
+    .student .item .txt .btn{
+        line-height: 1.5em;
+        border: 1px solid #ccc;
+        padding: 0 1em;
+        align-self: flex-end;
+        text-decoration: none;
+        border-radius: 200px;
+        margin-top: auto;
+
+    }
+    .student .item .txt .btn:hover{
+        background-color: #ccc;
+        color: #fff;
+    }
+
+
+    .force{
+            width: 1200px;
+            display: flex; /*left to right 橫向*/
+            margin: auto;
+    }
+    .force .item{
+        width: 368px; /* =1200/3-15*2-1+*2 */
+        margin: 15px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        transform: translateY(0px); /*animation before*/
+        transition: 0.5s; /*animation second*/
+    }
+    .force .item img{
+        width: 100%;
+        vertical-align: middle; /*使元素中部與父元素的基線+x height 的一半對齊*/
+    }
+    .force .item h2{
+        border-bottom: 1px solid #888;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.4em;
+        font-weight: 900;
+        transition: 0.25s /*animation second*/
+    }
+    .force .item p{
+        line-height: 1.6;
+        font-weight: 300;
+        transition: 0.25s /*animation second*/
+    }
+    .force .item .txt{
+        padding: 20px;
+        position: relative; /*positioned by .item .txt:before*/
+    }
+    .force .item .txt:before{ /*偽元素*/
+        content:''; /*need to be typed in or will be none.*/
+        position: absolute; /*positioning on .item .txt*/
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+        border-top: 50px solid transparent;
+        border-left: 184px solid #fff; /*368/2*/
+        border-right: 184px solid #fff; /*368/2*/
+        transform: translateY(-100%); /* up to 100% height(because of Y -100%) 向上100%高度(Y-100%)*/
+
+    }
+    .force .item:hover{
+        transform: translateY(-50px); /*animation after*/
+    }
+    .force .item:hover .txt{
+        background-image: linear-gradient(0deg, #fb8076, #feb85d);
+    }
+    .force .item:hover .txt:before{ /* when item be touched, .txt changes color*/
+        border-left: 184px solid #feb85d; /*368/2*/
+        border-right: 184px solid #feb85d; /*368/2*/
+
+    }
+    .force .item:hover h2{ /* h2 color changed animation */
+        color: #fff;
+        border-bottom-color: #fff;
+    }
+    
+    .force .item:hover p{ /*p color changed animation */
+        color: #fff;
+    }
+
+    .main-footer {
+        padding: 100px 0 0;
+        background-color: #26272B;
+    }
+    .main-footer .container{
+        display: flex;
+        width: 1200px;
+        height: 74vh;
+        margin: auto;
+    }
+    .footer-item{
+        width: 0; 
+        flex-grow: 1;/*平均分配*/
+        margin: 0 20px;                
+
+    }
+    .footer-item h4{
+        font-size: 24px;
+        text-align: left;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+        color: #fff;
+    }
+    .footer-item nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-item nav a{
+        line-height: 1.4;
+        text-decoration: none;
+        padding: 5px 0;
+        color: #fff;
+    }
+    .footer-item nav a:hover{
+        color: rgba(161, 146, 146, 0.774);
+    }
+    .footer-subs {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-subs .logo{
+        display: flex;
+    }
+    .footer-subs .logo img{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    .footer-subs .logo h2{
+        display: flex;
+        align-items:center ;
+        padding: 0 20px;
+        color: #fff;
+    }
+    .footer-subs h4 {
+        margin: 20px 0;
+    }
+    .footer-subs .info{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-subs form{
+        display: flex;
+        width: 100%;
+        margin: auto 0px;
+    }
+
+    .footer-subs form{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-subs input[type="text"],
+    .footer-subs input[type="submit"]{
+        border: none;
+        padding: 5px 10px;
+        
+    }
+    .footer-subs input[type="text"]{
+        width: 0;
+        flex-grow: 1;
+    }
+    .footer-subs .btn{
+        margin: 0 50px;
+        width: 150px;
+        color: rgb(73, 72, 72);
+        border-radius: 10px;
+        text-align: center;
+        background-color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .footer-subs .btn:hover{
+        color: #fff;
+        background-color: rgba(0,0,0,0.3);
+
+        
+    }
+    .copyright{
+        width: 90%;
+        display: flex;
+        text-align: left;
+        padding: 20px 0px;
+        background-color: #26272B;
+        color: #fff;
+        border-top: 1px solid #fff;
+        margin: auto;
+        
+    }
+    .copyright .social-icons{
+        display: flex;
+        text-align: right;
+        margin-left: 50%;
+        color: #fff;
+    }
+    .social-icons a{
+        font-size: 30px;
+        margin: 0 20px;
+        color: #fff;
+    }
+    .section-group{
+        padding: 100px 0;
+        min-height: 100%;
+    }
+    .group1{
+        background-color: rgb(194, 193, 193);
+    }
+    .group2{
+        background-color: rgb(136, 135, 135);
+    }
+    .group3{
+        background-color: rgb(97, 96, 96);
+    }
+    .group4{
+        background-color: rgb(51, 50, 50);
+    }
+
+    
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="main-header">
+    <div class="container">
+        <a href="/" class="logo">
+        <img src="https://160san.com/wp-content/uploads/2021/06/cropped-6.png">
+        <h2>壹陸零人生</h2>
+        </a>
+        <nav class="main-nav">
+            <ul></ul>
+            <a href="/">CATEGORIES</a>
+            <a href="/">About Me</a>
+            <a href="/">Donate Me</a>
+            <a href="/">Privacy Policy</a>
+        </nav>
+        <form action="" class="header-search">
+            <input type="search" name="" id="">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+
+    </div>
+</div>
+
+<div class="banner">
+    <div class="container">
+        <div class="banner-txt">
+            <h1>
+                壹陸零人生
+            </h1>
+            
+        </div>
+    </div>
+</div>
+
+<div class="section-group group1">
+    <div class="main-title">
+        <div class="container11">
+            <h1>《分類》</h1>
+            <div class="txt">
+                <p>
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="fish">
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="txt">
+                <h3>CSS零起手式 CSS Beginner</h3>
+                <p>金魚都能懂的網頁切版系列練習<BR>30DAYS CHALLENGE</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <div class="txt">
+                <h3>人生壹影</h3>
+                <p>人生必看壹影<BR>影評介紹</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-book"></i>
+
+            </div>
+            <div class="txt">
+                <h3>人生壹書</h3>
+                <p>人生必看壹書<BR>好用工具書介紹</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="section-group group2">
+    <div class="main-title">
+        <div class="container11">
+            <h1>《熱門文章》</h1>
+            <div class="txt">
+                <p>
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="student">
+        <div class="container">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=1">
+                </div>
+                <div class="txt">
+                    <h2>【影評】神劍闖江湖:THE FINAL 劍心宇宙的名義終結(有雷慎入)｜人生壹影</h2>
+                    <p></p>
+                    <a href="/" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=11">
+                </div>
+                <div class="txt">
+                    <h2>CSS 文字排版練習</h2>
+                    <p></p>
+                    <a href="/" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=111">
+                </div>
+                <div class="txt">
+                    <h2>CSS 不規則邊緣練習</h2>
+                    <p></p>
+                    <a href="/" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-group group3">
+    <div class="main-title">
+        <div class="container11">
+            <h1>《人員介紹》</h1>
+            <div class="txt">
+                <p>
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="force">
+        <div class="item">
+            <img src="https://picsum.photos/300/300/?random=3">
+            <div class="txt">
+                <h2>160san</h2>
+                <p>身高一百六，被名為「程式設計」的領域駕馭且痛苦不堪的中年男子，但仍為理想努力打拚，賣力一搏的生活著。</p>
+            </div>
+        </div>
+        
+        <div class="item">
+            <img src="https://picsum.photos/300/300/?random=6">
+            <div class="txt">
+                <h2>百六</h2>
+                <p>身高一百六，被名為「程式設計」的領域駕馭且痛苦不堪的中年男子，但仍為理想努力打拚，賣力一搏的生活著。</p>
+            </div>  
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/300/?random=9">
+            <div class="txt">
+                <h2>塵世中的小書童</h2>
+                <p>身高一百六，被名為「程式設計」的領域駕馭且痛苦不堪的中年男子，但仍為理想努力打拚，賣力一搏的生活著。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-footer">
+    <div class="container">        
+        
+        <div class="footer-item footer-subs">
+            <div class="logo">
+                <img src="https://160san.com/wp-content/uploads/2021/06/cropped-6.png">
+                <h2>壹陸零人生</h2>
+            </div>
+            <div class="info">
+                <h4>地址:第七天堂</h4>
+                <h4>電話:0800092000</h4>
+            <a href="/" class="btn">寄信 <br>Email to ME</a>
+            </div>
+        </div>
+
+        <div class="footer-item">
+
+            <h4>CATEGORIES </h4>
+            <nav>
+                <a href="/"><i class="fas fa-asterisk"></i> 極簡零</a>
+                <a href="/"><i class="fas fa-asterisk"></i> CSS零起手式 CSS beginner</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 人生壹影</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 人生壹書</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 壹起出遊六</a>
+                
+            </nav>
+        </div>
+        <div class="footer-item">
+            <h4>QUICK LINK </h4>
+            <nav>
+                <a href="/"><i class="fas fa-asterisk"></i> 關於百六 About Me</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 聯絡百六 Contact Me</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 贊助百六 Donate Me</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 隱私政策 Privacy Policy</a>
+                <a href="/"><i class="fas fa-asterisk"></i> 網站地圖 Site Map</a>
+            </nav>
+        </div>
+        
+    </div>
+        <div class="copyright">
+            <h4>Copyright &copy; 2021 壹陸零人生</h4>
+            <ul class="social-icons">
+                <li><a class="facebook" href="/"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="/"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="/"><i class="fab fa-youtube"></i></a></li>
+                <li><a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a></li>   
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>

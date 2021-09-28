@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單進度條</title>
+    <style type="text/css">
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    
+    *{
+        padding: 0;        
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+        html, body{
+            height: 100%;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            background-color: #555;
+        }
+        .list{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .list li{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 50%;
+            justify-content: center;
+            position: relative;
+            font-size: 30px;
+        }
+        .list li .fas{
+            font-size: 50px;
+            margin-bottom: 6px;
+        }
+        .list li + li {
+            margin-left: 100px;
+        }
+        .list li + li::before{
+            content:'';
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            top: 0;
+            bottom: 0;
+            left: -100px;
+            margin: auto;
+            background-color: #fff;
+        }
+        .list li.active ~ li{
+            background-color: #bbb;
+        }
+        .list li.active ~ li::before{
+            background-color: #bbb;
+        }
+    
+    </style>
+</head>
+<body>
+    <ol class="list">
+        <li>
+            <i class="fas fa-copy"></i>收到訂單
+        </li>
+        <li class="active">
+            <i class="fas fa-box"></i>撿貨中
+        </li>
+        <li>
+            <i class="fas fa-truck-moving"></i>運送中
+        </li>
+        <li>
+            <i class="fas fa-store-alt"></i>已送達
+        </li>
+    </ol>
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不規則邊緣</title>
+    <style type="text/css">
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+        
+    }
+
+    .banner{
+        height: 700px;
+        background: url("https://picsum.photos/700/700/?random=1") center top/ cover;
+    }
+    .sec{
+        position: relative;
+    }
+    .sec .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        padding: 100px 0;
+        position: relative;
+        z-index: 2;
+
+    }
+    .sec .item{
+        width: 570px;
+        margin: 0 15px;
+    }
+    .sec .item h2{
+        margin-bottom: 1.3em;
+    }
+    .sec .item p{
+        line-height: 1.7;
+        margin-bottom: 1.6em;
+    }
+    .sec::after{
+        content:'';
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        top: 0;
+        left: 50%;
+        transform: translateX(-30%) translateY(-50%);
+        border-radius: 50%;
+        box-shadow: 200px 0px 0px 0px #fff, 
+                    300px 0px 0px -30px #fff,
+                    500px 0px 0px 0px #fff,
+                    690px 34px 0px 60px #fff,
+                    700px 0px 0px -20px #fff, 
+                    570px 0px 0px -30px #fff,
+                    400px 0px 0px 0px #fff,
+                    690px 34px 0px 60px #fff,
+                    -200px 0px 0px -20px #fff, 
+                    -300px 0px 0px -30px #fff,
+                    -500px 0px 0px -40px #fff,
+                    -690px 34px 0px 60px #fff,
+                    -400px 0px 0px 0px #fff, 
+                    -450px 0px 0px -30px #fff,
+                    -100px 0px 0px 0px #fff,
+                    -690px 34px 0px 60px #fff,
+                    -178px -30px 0 30px rgba(0,0,0,0.5),
+                    -278px -60px 0 30px rgba(0,0,0,0.5),
+                    -378px -30px 0 30px rgba(0,0,0,0.5),
+                    -458px -60px 0 30px rgba(0,0,0,0.5),
+                    178px -30px 0 30px rgba(0,0,0,0.5),
+                    278px -60px 0 30px rgba(0,0,0,0.5),
+                    378px -30px 0 30px rgba(0,0,0,0.5),
+                    458px -60px 0 30px rgba(0,0,0,0.5),
+                    -678px -30px 0 30px rgba(0,0,0,0.5),
+                    -578px -60px 0 30px rgba(0,0,0,0.5),
+                    -778px -30px 0 30px rgba(0,0,0,0.5),
+                    -858px -60px 0 30px rgba(0,0,0,0.5),
+                    578px -60px 0 30px rgba(0,0,0,0.5),
+                    678px -30px 0 30px rgba(0,0,0,0.5),
+                    778px -30px 0 30px rgba(0,0,0,0.5),
+                    58px -60px 0 30px rgba(0,0,0,0.5),
+                    78px -30px 0 30px rgba(0,0,0,0.5),
+                    78px -30px 0 30px rgba(0,0,0,0.5),
+                    58px -60px 0 30px rgba(0,0,0,0.5);
+                    ;
+    }
+    .sec::before{
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+    }
+    </style>
+
+</head>
+<body>
+<div class="banner"></div>
+<div class="sec">
+    <div class="container">
+        <div class="item">
+            <h2>123</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum eius quae provident voluptate placeat esse reprehenderit voluptatem, excepturi temporibus, laborum, praesentium at magni natus repellendus ducimus sunt maiores ab aliquam!</p>
+        </div>
+        <div class="item">
+            <h2>123</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum eius quae provident voluptate placeat esse reprehenderit voluptatem, excepturi temporibus, laborum, praesentium at magni natus repellendus ducimus sunt maiores ab aliquam!</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

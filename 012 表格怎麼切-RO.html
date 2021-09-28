@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格怎麼切</title>
+    <style type="text/css">
+    @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    .container{
+        width: 1200px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .item{
+        width: 100%; /*400-30-2-5*/
+        height: 50%;
+        margin: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+    }
+    .pic:nth-child(1):hover{
+        border: 10px solid rgba(33, 101, 236, 0.7);
+        box-shadow: 0 10px 30px rgba(45, 112, 247, 0.9) ; /*x軸 Y軸 模糊度 色彩* X axis Y axis opacity color*/
+    }
+   
+    
+    .pic:nth-child(2):hover{
+        border: 10px solid rgba(33, 101, 236, 0.7);
+        box-shadow: 0 10px 30px rgba(45, 112, 247, 0.9) ; 
+    }
+    
+    .pic:nth-child(3):hover{
+        border: 10px solid rgba(33, 101, 236, 0.7);
+        box-shadow: 0 10px 30px rgba(45, 112, 247, 0.9) ; 
+    }
+    
+    .item .pic{
+        align-items: center;
+        width: 25%;
+        height: 50%;
+        border: 2px solid rgba(161,184,230,0.5);
+        margin: auto;
+        border-radius: 5px;
+    }
+    .item .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*填滿元素的寬度及高度(維持原比例)The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box*/
+
+
+    }
+    
+    .intro{
+        width: 100%;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        
+        
+    }
+    
+
+    table{
+        width: 30%;
+        margin-left: 55px;
+        border-radius: 10px;
+    }
+    table tr{
+        padding: 6px 10px;
+    }
+ 
+    table td{
+        padding: 6px 10px;
+    }
+    
+    table td:nth-child(1),
+    table td:nth-child(3){
+        background-color: rgba(161,184,230,0.5);
+        color: rgb(14, 78, 206);
+        font-weight: 900;
+    }
+    table td:nth-child(2),
+    table td:nth-child(4){
+        background-color: rgb(240, 236, 236,0.7);
+        font-weight: 500;
+    }
+   
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="pic">
+                <img src="https://160san.com/wp-content/uploads/2021/06/Acolytewoman.png">
+            </div>
+            <div class="pic">
+                <img src="https://160san.com/wp-content/uploads/2021/06/Archerwoman.png">
+            </div>
+            <div class="pic">
+                <img src="https://160san.com/wp-content/uploads/2021/06/ro-swordmanwoman.png">
+            </div>
+        </div>
+        <div class= intro>   
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td colspan="2">壹陸零人生</td>
+                    <td>STR</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>Job</td>
+                    <td colspan="2">Acolyte</td>
+                    <td>AGI</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>Lv.</td>
+                    <td colspan="2">99</td>
+                    <td>VIT</td>
+                    <td colspan="2">40</td>
+                </tr>
+                <tr>
+                    <td>EXP</td>
+                    <td colspan="2">115392</td>
+                    <td>INT</td>
+                    <td colspan="2">99</td>
+                </tr>
+                <tr>
+                    <td>HP</td>
+                    <td colspan="2">3581</td>
+                    <td>DEX</td>
+                    <td colspan="2">60</td>
+                </tr>
+                <tr>
+                    <td>SP</td>
+                    <td colspan="2">341</td>
+                    <td>LUK</td>
+                    <td colspan="2">1</td>
+                </tr>    
+            </table>
+        
+            <!---2-->  
+                    
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td colspan="2">網婆去當兵</td>
+                    <td>STR</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>Job</td>
+                    <td colspan="2">Archer</td>
+                    <td>AGI</td>
+                    <td colspan="2">99</td>
+                </tr>
+                <tr>
+                    <td>Lv.</td>
+                    <td colspan="2">99</td>
+                    <td>VIT</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>EXP</td>
+                    <td colspan="2">115392</td>
+                    <td>INT</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>HP</td>
+                    <td colspan="2">3581</td>
+                    <td>DEX</td>
+                    <td colspan="2">80</td>
+                </tr>
+                <tr>
+                    <td>SP</td>
+                    <td colspan="2">341</td>
+                    <td>LUK</td>
+                    <td colspan="2">30</td>
+                </tr>    
+            </table>
+        
+         
+            
+       <!---3----> 
+        
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td colspan="2">遊戲新斷線</td>
+                    <td>STR</td>
+                    <td colspan="2">99</td>
+                </tr>
+                <tr>
+                    <td>Job</td>
+                    <td colspan="2">Swordman</td>
+                    <td>AGI</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>Lv.</td>
+                    <td colspan="2">99</td>
+                    <td>VIT</td>
+                    <td colspan="2">30</td>
+                </tr>
+                <tr>
+                    <td>EXP</td>
+                    <td colspan="2">115392</td>
+                    <td>INT</td>
+                    <td colspan="2">80</td>
+                </tr>
+                <tr>
+                    <td>HP</td>
+                    <td colspan="2">3581</td>
+                    <td>DEX</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td>SP</td>
+                    <td colspan="2">341</td>
+                    <td>LUK</td>
+                    <td colspan="2">1</td>
+                </tr>    
+            </table>
+        </div>
+    </div>           
+      
+</body>
+</html>
